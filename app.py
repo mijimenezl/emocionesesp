@@ -2,7 +2,7 @@ import streamlit as st
 from textblob import TextBlob
 from googletrans import Translator
 from PIL import Image
-from playsound import playsound  
+
 
 translator = Translator()
 st.title('Uso de textblob')
@@ -38,19 +38,19 @@ with st.expander('Analizar Polaridad y Subjetividad en un texto'):
             st.write( 'Es un sentimiento Positivo 😊')
             image = Image.open("pitbullhappy.jpg")
             st.image(image, caption="¡Sentimiento Positivo!", use_column_width=True)
-            playsound('happy.mp3')
+            st.audio('happy.mp3')
           
         elif x <= -0.5:
             st.write( 'Es un sentimiento Negativo 😔')
             image = Image.open("pitbullsad.jpg")
             st.image(image, caption="Sentimiento Negativo", use_column_width=True)
-            playsound('sad.mp3')
+            st.audio('sad.mp3')
           
         else:
             st.write( 'Es un sentimiento Neutral 😐')
             image = Image.open("pitbullneutral.jpg")
             st.image(image, caption="Sentimiento Neutral", use_column_width=True)
-            playsound('neutral.mp3')
+            st.audio('neutral.mp3')
           
 
 with st.expander('Corrección en inglés'):
