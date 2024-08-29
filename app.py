@@ -38,10 +38,10 @@ with st.expander('Analizar Polaridad y Subjetividad en un texto'):
             image = Image.open("pitbullhappy.jpg")
         elif x <= -0.5:
             st.write( 'Es un sentimiento Negativo 😔')
-            
+            image = Image.open("pitbullsad.jpg")
         else:
             st.write( 'Es un sentimiento Neutral 😐')
-            
+            image = Image.open("pitbullneutral.jpg")
 
 with st.expander('Corrección en inglés'):
        text2 = st.text_area('Escribe por favor: ',key='4')
