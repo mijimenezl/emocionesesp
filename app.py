@@ -2,7 +2,7 @@ import streamlit as st
 from textblob import TextBlob
 from googletrans import Translator
 from PIL import Image
-from playsound import playsound  # Si el archivo es de audio
+from playsound import playsound  
 
 translator = Translator()
 st.title('Uso de textblob')
